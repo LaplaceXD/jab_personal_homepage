@@ -1,0 +1,225 @@
+.glowing-circle {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,var(--title-text-color) 0%,var(--primary-color) 100%);
+  box-shadow: 0 0 24px var(--shadow-color);
+}
+
+@media screen and (min-width: 768px) {
+  .glowing-circle {
+    width: 336px;
+    height: 336px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .glowing-circle {
+    width: 724px;
+    height: 724px;
+  }
+}
+
+.container {
+  width: 90vw;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--title-text-color) 0%, var(--primary-color) 100%);
+  padding: 12px 48px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: transform 250ms ease;
+}
+
+.btn:hover {
+  animation: breathing-colors 1.5s ease infinite alternate;
+}
+
+.btn:active {
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 56px;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 48px;
+  height: 24px;
+  z-index: 3;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger::before, .hamburger::after {
+  content: "";
+  background: var(--white);
+  width: 100%;
+  height: 1px;
+  transition: transform 250ms ease;
+}
+
+.hamburger.active {
+  height: 48px;
+  justify-content: stretch;
+}
+
+.hamburger.active::before {
+  transform: translateY(24px) rotate(45deg);
+}
+
+.hamburger.active::after {
+  transform: translateY(24px) rotate(-45deg);
+}
+
+.modal__wrapper {
+  display: none;
+  position: fixed;
+  background: hsla(261, 100%, 4%, 50%);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  opacity: 0;
+  z-index: 4;
+  transition: opacity 500ms ease;
+}
+
+.modal__wrapper.visible {
+  display: block;
+}
+
+.modal__wrapper.active {
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: var(--white);
+  border-radius: 16px 16px 0 0;
+  top: 10%;
+  overflow: hidden;
+  transform: translate(0, 150%);
+  transition: transform 750ms ease;
+  overflow-y: scroll;
+}
+
+.modal .hamburger.active {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  right: 0;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.modal .hamburger::after, .modal .hamburger::before {
+  background: var(--white);
+  height: 2px;
+  border-radius: 1px;
+}
+
+.modal .hamburger.active::before {
+  transform: translateY(16px) rotate(45deg);
+}
+
+.modal .hamburger.active::after {
+  transform: translateY(16px) rotate(-45deg);
+}
+
+.modal.active {
+  transform: translate(0, 0);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.content__wrapper {
+  padding: 32px;
+}
+
+.content__img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.content__title {
+  margin-top: -98px;
+  margin-bottom: 48px;
+  font-size: 2em;
+  color: var(--white);
+}
+
+.content__tags {
+  list-style-type: none;
+  display: flex;
+}
+
+.content__tags > li {
+  margin-right: 12px;
+  padding: 2px 12px;
+  background: var(--main-gradient);
+  color: var(--white);
+  border-radius: 24px;
+}
+
+.content__description {
+  margin-top: 32px;
+  font-size: 1.1em;
+  color: var(--black);
+}
+
+.content__btn {
+  display: inline-flex;
+  margin-top: 64px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--title-text-color);
+  border: 2px solid var(--title-text-color);
+  transition: color 500ms ease;
+}
+
+.content__btn:hover {
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .content__title {
+    font-size: 3em;
+    margin-top: -128px;
+  }
+
+  .modal {
+    width: 624px;
+    height: 624px;
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    overflow-y: hidden;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%);
+  }
+}

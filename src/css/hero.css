@@ -1,0 +1,159 @@
+/*=============HERO SECTION===============*/
+.hero {
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2.25em;
+  color: var(--white);
+  line-height: 1.25em;
+  margin-top: 16px;
+}
+
+.hero__title--highlight {
+  -moz-text-stroke: 1px var(--white);
+  -ms-text-stroke: 1px var(--white);
+  -webkit-text-stroke: 1px var(--white);
+  color: transparent;
+}
+
+.hero__subtitle {
+  color: var(--title-text-color);
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  font-size: 0.75em;
+}
+
+.hero__content {
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-top: 36px;
+  line-height: 2em;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  margin-top: 36px;
+  width: 100%;
+  max-width: 512px;
+}
+
+.hero__btn > svg {
+  width: 16px;
+}
+
+.hero__btn > svg {
+  margin-left: 12px;
+}
+
+.hero__btn:hover > svg {
+  animation: move-right 1s ease infinite;
+}
+
+
+.hero > .glowing-circle {
+  margin: auto;
+  margin-top: 32px;
+  width: 256px;
+  height: 256px;
+  animation: side-to-side 1.5s alternate infinite ease;
+  z-index: -1;
+}
+
+.hero > .glowing-circle.active {
+  animation: slide-from-left 1.5s ease;
+}
+
+.hero__img {
+  object-position: center;
+  width: 256px;
+  animation: img__updown 1.5s ease alternate infinite;
+}
+
+@keyframes img__updown {
+  to {
+    transform: translateX(-1.5%) translateY(-9.5%);
+  } 
+  from {
+    transform: translateX(1.5%) translateY(-6.5%);
+  } 
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    text-align: left;
+    width: 80%;
+  }
+
+  .hero__btn {
+    width: initial;
+    margin-top: 72px;
+  }
+
+  .hero__title {
+    font-size: 3.5em;
+  }
+
+  .hero__content {
+    font-size: 1em;
+  }
+
+  .hero > .glowing-circle {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    height: 336px;
+    width: 336px;
+  }
+
+  .hero__img {
+    width: 336px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    width: 70%;
+  }
+  
+  .hero__title {
+    font-size: 5em;
+    margin-top: 36px;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.1em;
+  }
+  
+  .hero > .glowing-circle {
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    width: 60%;
+  }
+
+  .hero__content {
+    width: 65%;
+    margin-top: 48px;
+  }
+
+  .hero > .glowing-circle {
+    top: 12%;
+    height: 512px;
+    width: 512px;
+  }
+
+  .hero__img {
+    width: 512px;
+  }
+
+  .hero__btn {
+    margin-top: 92px;
+  }
+}

@@ -1,0 +1,113 @@
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95vw;
+  padding: 16px 0 32px 0;
+  margin: 0 auto;
+}
+
+/*============NAV===========*/
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--black);
+  top: 0;
+  left: 0;
+  transform: translateX(150%);
+  transition: transform 250ms ease;
+  z-index: 2;
+}
+
+.nav > .glowing-circle {
+  position: fixed;
+  opacity: 0;
+  top: 42%;
+  left: 40%;
+  transform: translate(-50%, 200%);
+  animation: none;
+  transition: transform 1.25s ease 250ms, opacity 1.25s ease 250ms;
+}
+
+.nav.active {
+  transform: translateX(0%);
+}
+
+.nav.active > .glowing-circle {
+  transform: translate(-50%, -52%);
+  opacity: 1;
+  animation: updown 1.5s ease infinite alternate;
+  animation-delay: 1.75s;
+}
+
+@keyframes updown {
+  from {
+    transform: translate(-50%, -52%);
+  }
+  to {
+    transform: translate(-50%, -48%);
+  }
+}
+/*============NAVLINKS===========*/
+.nav__links {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  margin: 0 auto;
+  transform: translate(-50%, 200%);
+  list-style-type: none;
+  text-align: center;
+  transition: transform 1.25s ease 250ms, opacity 1.25s ease 250ms;
+}
+
+.nav.active > .nav__links {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.nav__link + .nav__link {
+  margin-top: 12px;
+}
+
+.nav__link > a {
+  display: block;
+  font-size: 2.25em;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+  -ms-text-stroke: 1px var(--white);
+  -moz-text-stroke: 1px var(--white);
+  transition: all 250ms ease;
+}
+
+.nav__link > a:hover {
+  color: white;
+  transform: scale(1.1);
+  -webkit-text-stroke: none;
+  -ms-text-stroke: none;
+  -moz-text-stroke: 1px var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 32px 0;
+  }
+
+  .nav__link > a {
+    font-size: 3.25em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .nav > .glowing-circle {
+    top: 50%;
+    left: 50%;
+  }
+
+  .nav__link > a {
+    font-size: 5em;
+  }
+}

@@ -1,0 +1,46 @@
+.about {
+  position: relative;
+}
+
+.snippets {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  margin-top: 48px;
+}
+
+.snippets__btn {
+  color: var(--text-color);
+  border: solid var(--title-text-color) 2px;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 12px;
+  height: 125px;
+  box-shadow: 0 0 12px var(--shadow-color);
+  transition: color 500ms ease;
+}
+
+.snippets__btn:hover {
+  color: var(--white);
+  border: none;
+  animation: breathing-colors 1s ease infinite alternate;
+}
+
+a.snippets__btn {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 24px;
+  }
+
+  .snippets {
+    width: 60%;
+  }
+
+  .snippets__btn {
+    font-size: 1.25em;
+  }
+}

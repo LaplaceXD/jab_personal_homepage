@@ -1,0 +1,99 @@
+.fade-and-slide-in {
+  animation: fade-in 1.5s ease, slide-to-top 1.5s ease;
+}
+
+.fade-in {
+  animation: fade-in 1.5s ease;
+}
+
+.slide-left {
+  animation: slide-left 1s ease;
+}
+
+.slide-right {
+  animation: slide-right 1s ease;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(250%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-250%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to-top {
+  from {
+    transform: translate(0, 40%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes side-to-side {
+  from {
+    transform: translateX(0%);
+  } 
+  to {
+    transform: translateX(3%);
+  } 
+}
+
+@keyframes breathing-colors {
+  from {
+    background: none;
+    background-color: var(--primary-color);
+  }
+  to {
+    background: none;
+    background-color: var(--title-text-color);
+  }
+}
+
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(160%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-8px);
+  }
+}

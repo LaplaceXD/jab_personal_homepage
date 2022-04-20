@@ -1,0 +1,29 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  color: var(--white);
+}
+
+button:hover {
+  cursor: pointer;
+}

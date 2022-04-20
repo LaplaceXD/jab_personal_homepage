@@ -1,0 +1,190 @@
+{
+  "config": {
+    "css": [ "resets.css", "animations.css", "base.css", "common.css", "header.css", "footer.css", "hero.css", "showcase.css" ],
+    "js": [ "Observer.js", "Modal.js", "ModalContent.js", "service.js", "Toggle.js", "Loader.js" ],
+    "entry": "index.php",
+    "prefix": "page"
+  },
+  "title": "JAB - Personal Homepage",
+  "logo": "src/img/logo.svg",
+  "socials": [
+    {
+      "name": "facebook",
+      "icon": "src/img/icons/facebook.svg",
+      "href": "https://web.facebook.com/DarkGenesis143/"
+    },
+    {
+      "name": "twitter",
+      "icon": "src/img/icons/twitter.svg",
+      "href": "https://twitter.com/xdlegacy_"
+    },
+    {
+      "name": "linkedin",
+      "icon": "src/img/icons/linkedin.svg",
+      "href": "https://www.linkedin.com/in/laplace-xd/"
+    },
+    {
+      "name": "github",
+      "icon": "src/img/icons/github.svg",
+      "href": "https://github.com/LaplaceXD"
+    }
+  ],
+  "pages": {
+    "home": {
+      "name": "Home",
+      "css": "home.css",
+      "content": {
+        "title": {
+          "content": "Welcome to JAB space station.",
+          "highlight": "space station."
+        },
+        "subtitle": "Are you lost kind stranger?",
+        "description": "This is a site I made for one of my projects. It is a neat little work of mine, and I'm quite proud of it. Care to look around? You can use the hamburger icon at the top right to look around, or you can click the randomize button below to spice up your journey.",
+        "buttons": [ 
+          {
+            "text": "Surprise Me",
+            "left_icon": "src/img/icons/dice-solid.svg",
+            "id": "random"
+          }
+        ]
+      }
+    },
+    "about": {
+      "name": "About Me",
+      "css": "about.css",
+      "content": {
+        "title": {
+          "content": "Jonh Alexis Buot speaking.",
+          "highlight": "speaking."
+        },
+        "subtitle": "Hello there!",
+        "description": "I am a college student currently studying Bachelor of Science in Computer Science at the University of San Carlos. A quick rundown on who I am would be to describe myself in one word, and that would be jolly, since I am always smiling and cheering people on.",
+        "img": {
+          "src": "src/img/me.png",
+          "alt": "Jonh Alexis Buot Profile Picture"
+        },
+        "snippets": {
+          "games": {
+            "name": "🎮 Games",
+            "type": "redirect",
+            "href": "index.php?page=games"
+          },
+          "gallery": {
+            "name": "🖼️ Gallery",
+            "type": "redirect",
+            "href": "index.php?page=gallery"
+          }
+        }
+      }
+    },
+    "games": {
+      "name": "Games",
+      "css": "games.css",
+      "content": {
+        "title": {
+          "content": "GamesShowcase",
+          "highlight": "Showcase"
+        },
+        "subtitle": "You wanna play? Let's play.",
+        "description": "I have a deep love for games, since I was brought up with a computer and home television nearby. Thus, I have always enjoyed playing games during my spare time. Below are some of the games that I am currently playing.",
+        "games": [
+          {
+            "name": "CS:GO",
+            "img": {
+              "alt": "Counter Strike Global Offensive",
+              "src": "src/img/csgo.jpg",
+              "css_src": "../img/csgo.jpg"
+            },
+            "link": {
+              "name": "Get it on Steam",
+              "href": "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"
+            },
+            "tags": [ "FPS", "Free-to-play", "Shooter" ],
+            "description": "This is one of my favorite games since I played it when I was a child, and I have always been fond of first-person shooter games."
+          },
+          {
+            "name": "Genshin Impact",
+            "img": {
+              "alt": "Genshin Impact",
+              "src": "src/img/genshin.jpeg",
+              "css_src": "../img/genshin.jpeg"
+            },
+            "link": {
+              "name": "Get it on their Site",
+              "href": "https://genshin.hoyoverse.com/en/"
+            },
+            "tags": [ "Open World", "RPG", "Gacha" ],
+            "description": "This is currently one of the games that I am addicted to, due to its open world mechanic, combined with amazing and likeable characters. It was just the perfect recipe to hook me in."
+          },
+          {
+            "name": "Valorant",
+            "img": {
+              "alt": "Valorant",
+              "src": "src/img/valorant.webp",
+              "css_src": "../img/valorant.webp"
+            },
+            "link": {
+              "name": "Get it on their Site",
+              "href": "https://playvalorant.com/en-us/"
+            },
+            "tags": [ "Shooter", "FPS", "Champions" ],
+            "description": "I have started playing Valorant over the month, since some of my friends have been inviting me frequently to join their matches. I have to say that it is quite a fun game."
+          },
+          {
+            "name": "Mobile Legends",
+            "img": {
+              "alt": "Mobile Legends",
+              "src": "src/img/mobilelegends.webp",
+              "css_src": "../img/mobilelegends.webp"
+            },
+            "link": {
+              "name": "Get it on their Site",
+              "href": "https://m.mobilelegends.com/en"
+            },
+            "tags": [ "Champions", "MOBA", "Strategy" ],
+            "description": "Although my play hours have dwindled on this game. I still play it from time to time, since it is easily accessible through my phone, and it is still a great way to past time."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "name": "Gallery Exhibit",
+      "css": "gallery.css",
+      "content": {
+        "title": {
+          "content": "GalleryExhibit",
+          "highlight": "Exhibit"
+        },
+        "subtitle": "Take a shot. Make it two.",
+        "description": "In the past, I was an avid photographer. I used to take pictures of a lot of things that I find interesting and worthwhile to look at. Although, my interests have dwindled, I still would love to showcase the pictures that I have taken over the years.",
+        "images": [
+          {
+            "name": "City",
+            "src": "src/img/city.jpg",
+            "css_src": "../img/city.jpg"
+          },
+          {
+            "name": "Golden Hour",
+            "src": "src/img/pinksky.jpg",
+            "css_src": "../img/pinksky.jpg"
+          },
+          {
+            "name": "Sunset",
+            "src": "src/img/goldenhour.jpg",
+            "css_src": "../img/goldenhour.jpg"
+          },
+          {
+            "name": "Flowers",
+            "src": "src/img/flowers.jpg",
+            "css_src": "../img/flowers.jpg"
+          },
+          {
+            "name": "Blue Sky",
+            "src": "src/img/blue.jpg",
+            "css_src": "../img/blue.jpg"
+          }
+        ]
+      }
+    }
+  }
+}
