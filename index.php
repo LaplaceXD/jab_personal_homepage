@@ -26,7 +26,6 @@
               include "src/components/sections/gallery.php";
               break;
             default:
-              print("NO");
               header("Content-Type: text/html; charset=utf-8");
               header("Location:" . $data->config->entry . "?" . $data->config->prefix . "=404");
               break;
