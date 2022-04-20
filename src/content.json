@@ -185,6 +185,25 @@
           }
         ]
       }
+    },
+    "404": {
+      "name": "404",
+      "css": "404.css",
+      "hidden": true,
+      "content": {
+        "title": {
+          "content": "Are you lost?",
+          "highlight": "lost?."
+        },
+        "subtitle": "Page is not found.",
+        "description": "It seems that the page you are looking for does not exist.",
+        "buttons": [ 
+          {
+            "text": "Go back to Home",
+            "id": "home"
+          }
+        ]
+      }
     }
   }
 }

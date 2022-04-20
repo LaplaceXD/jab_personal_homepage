@@ -72,5 +72,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     
   });
-  
+ 
+  // redirect to home
+  const home = document.querySelector(".js-home");
+  if(home) {
+    home.addEventListener("click", () => {
+      location.href = `${data.config.entry}?${data.config.prefix}=home`;
+    });
+  }
 });

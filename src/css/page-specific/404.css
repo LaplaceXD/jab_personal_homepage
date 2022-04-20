@@ -1,0 +1,25 @@
+.hero {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.hero__content {
+  margin: 32px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    margin: 56px auto;
+  }
+
+  .hero {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    margin: 72px auto 0 auto;
+  }
+}
