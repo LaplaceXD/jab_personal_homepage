@@ -1,7 +1,7 @@
 <?php 
   function render_footer($pages, $current_page, $socials) {
     $page_numbers = get_page_numbers($pages);
-    $page_number = $page_numbers[$current_page];
+    $page_number = $page_numbers[$current_page] ?? 0;
     $total_pages = count($page_numbers);
 ?>
     <footer>
